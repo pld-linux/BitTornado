@@ -1,12 +1,12 @@
 Summary:	BitTornado - an improved bittorrent client
 Summary(pl):	BitTornado - ulepszony klient bittorrenta
 Name:		BitTornado
-Version:	0.3.8
-Release:	2
+Version:	0.3.9b
+Release:	0.1
 License:	MIT
 Group:		Applications/Communications
 Source0:	http://bittornado.com/download/%{name}-%{version}.tar.gz
-# Source0-md5:	629f848c27d409cacd8ab23792fe3b54
+# Source0-md5:	8a911ad8b107fb37ce07e70d6bd2675e
 URL:		http://bittornado.com/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov 
