@@ -9,7 +9,6 @@ Source0:	http://bittornado.com/download/%{name}-%{version}.tar.gz
 # Source0-md5:	356213bc5964377a21cd9c56cd130c0d
 URL:		http://bittornado.com/
 BuildRequires:	python-devel
-BuildRequires:	rpm-pythonprov 
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 Requires:	python-modules
