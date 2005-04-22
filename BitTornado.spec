@@ -1,14 +1,16 @@
 Summary:	BitTornado - an improved bittorrent client
 Summary(pl):	BitTornado - ulepszony klient bittorrenta
 Name:		BitTornado
-Version:	0.3.10
+Version:	0.3.12
 Release:	1
 License:	MIT
 Group:		Applications/Communications
 Source0:	http://bittornado.com/download/%{name}-%{version}.tar.gz
-# Source0-md5:	356213bc5964377a21cd9c56cd130c0d
+# Source0-md5:	c14574fb2ac98c9af53e921b52a4732e
 URL:		http://bittornado.com/
+BuildRequires:	python
 BuildRequires:	python-devel
+BuildRequires:	python-modules
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 Requires:	python-modules
@@ -38,7 +40,7 @@ Summary:	GUI for BitTornado
 Summary:	Graficzny interfejs u¿ytkownika dla BitTornado
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
-Requires:	python-wxPython
+Requires:	python-wxPython >= 2.5.2
 Obsoletes:	BitTorrent-gui
 
 %description gui
