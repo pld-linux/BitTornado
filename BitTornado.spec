@@ -12,7 +12,6 @@ BuildRequires:	python
 BuildRequires:	python-devel
 BuildRequires:	python-modules
 BuildRequires:	sed >= 4.0
-BuildRequires:	unzip
 Requires:	python-modules
 Obsoletes:	BitTorrent
 BuildArch:	noarch
@@ -51,6 +50,8 @@ Bazuj±cy na wxWindows graficzny interfejs u¿ytkownika dla BitTorrenta.
 
 %prep
 %setup -q -n %{name}-CVS
+# enabled Psyco
+%{__sed} -i 's,^psyco = 0,psyco = 1,' BitTornado/PSYCO.py
 
 %build
 find -type f -exec sed -i -e 's|#!.*python.*|#!%{_bindir}/python|g' "{}" ";"
