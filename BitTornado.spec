@@ -2,11 +2,12 @@ Summary:	BitTornado - an improved bittorrent client
 Summary(pl):	BitTornado - ulepszony klient bittorrenta
 Name:		BitTornado
 Version:	0.3.13
-Release:	1
+Release:	1.1
 License:	MIT
 Group:		Applications/Communications
 Source0:	http://bittornado.com/download/%{name}-%{version}.tar.gz
 # Source0-md5:	2ad36b3437778ecb635d02a35f3bfca9
+Patch0:		%{name}-new-wxpython-namespace.patch
 URL:		http://bittornado.com/
 BuildRequires:	python
 BuildRequires:	python-devel
@@ -50,8 +51,9 @@ Bazuj±cy na wxWindows graficzny interfejs u¿ytkownika dla BitTorrenta.
 
 %prep
 %setup -q -n %{name}-CVS
-# enabled Psyco
+# enable Psyco
 %{__sed} -i 's,^psyco = 0,psyco = 1,' BitTornado/PSYCO.py
+%patch0 -p1
 
 %build
 find -type f -exec sed -i -e 's|#!.*python.*|#!%{_bindir}/python|g' "{}" ";"
