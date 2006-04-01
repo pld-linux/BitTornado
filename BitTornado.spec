@@ -11,6 +11,7 @@ URL:		http://bittornado.com/
 BuildRequires:	python
 BuildRequires:	python-devel
 BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
 Requires:	python-modules
 Obsoletes:	BitTorrent < 4.2.0
@@ -68,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.txt 
+%doc *.txt
 %attr(755,root,root) %{_bindir}/btcompletedir.py
 %attr(755,root,root) %{_bindir}/btdownloadcurses.py
 %attr(755,root,root) %{_bindir}/btdownloadheadless.py
