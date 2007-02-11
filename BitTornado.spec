@@ -35,7 +35,7 @@ wiêcej.
 
 %package gui
 Summary:	GUI for BitTornado
-Summary:	Graficzny interfejs u¿ytkownika dla BitTornado
+Summary(pl):	Graficzny interfejs u¿ytkownika dla BitTornado
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	python-wxPython >= 2.5.2
