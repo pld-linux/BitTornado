@@ -1,5 +1,5 @@
 Summary:	BitTornado - an improved bittorrent client
-Summary(pl.UTF-8):   BitTornado - ulepszony klient bittorrenta
+Summary(pl.UTF-8):	BitTornado - ulepszony klient bittorrenta
 Name:		BitTornado
 Version:	0.3.18
 Release:	1
@@ -35,7 +35,7 @@ więcej.
 
 %package gui
 Summary:	GUI for BitTornado
-Summary(pl.UTF-8):   Graficzny interfejs użytkownika dla BitTornado
+Summary(pl.UTF-8):	Graficzny interfejs użytkownika dla BitTornado
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	python-wxPython >= 2.5.2
