@@ -1,5 +1,5 @@
 Summary:	BitTornado - an improved bittorrent client
-Summary(pl):	BitTornado - ulepszony klient bittorrenta
+Summary(pl.UTF-8):   BitTornado - ulepszony klient bittorrenta
 Name:		BitTornado
 Version:	0.3.13
 Release:	1.1
@@ -26,18 +26,18 @@ most advanced clients out there. It allows you to limit your bandwidth
 consumption, and provides more control over your torrents. It does
 everything the original bittorrent does, plus more.
 
-%description -l pl
-BitTornado jest ulepszonym klientem bittorrenta zbudowanym bazuj±c na
-oryginalnym BitTorrent. Klient charakteryzuje siê rozszerzon± obs³ug±
-konsoli, kilkoma nowymi w³a¶ciwo¶ciami i jest generalnie jednym z
-bardziej zaawansowanych klientów bittorrenta. Pozwala ograniczaæ
-przepustowo¶æ oraz udostêpnia du¿± kontrolê nad torrentami. Umie
-wszystko co umia³ oryginalny klient bittorrenta i jeszcze troszkê
-wiêcej.
+%description -l pl.UTF-8
+BitTornado jest ulepszonym klientem bittorrenta zbudowanym bazujÄ…c na
+oryginalnym BitTorrent. Klient charakteryzuje siÄ™ rozszerzonÄ… obsÅ‚ugÄ…
+konsoli, kilkoma nowymi wÅ‚aÅ›ciwoÅ›ciami i jest generalnie jednym z
+bardziej zaawansowanych klientÃ³w bittorrenta. Pozwala ograniczaÄ‡
+przepustowoÅ›Ä‡ oraz udostÄ™pnia duÅ¼Ä… kontrolÄ™ nad torrentami. Umie
+wszystko co umiaÅ‚ oryginalny klient bittorrenta i jeszcze troszkÄ™
+wiÄ™cej.
 
 %package gui
 Summary:	GUI for BitTornado
-Summary:	Graficzny interfejs u¿ytkownika dla BitTornado
+Summary(pl.UTF-8):   Graficzny interfejs uÅ¼ytkownika dla BitTornado
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	python-wxPython >= 2.5.2
@@ -46,8 +46,8 @@ Obsoletes:	BitTorrent-gui
 %description gui
 wxWindows based GUI for BitTorrent.
 
-%description gui -l pl
-Bazuj±cy na wxWindows graficzny interfejs u¿ytkownika dla BitTorrenta.
+%description gui -l pl.UTF-8
+BazujÄ…cy na wxWindows graficzny interfejs uÅ¼ytkownika dla BitTorrenta.
 
 %prep
 %setup -q -n %{name}-CVS
