@@ -57,12 +57,12 @@ find -type f -exec sed -i -e 's|#!.*python.*|#!%{_bindir}/python|g' "{}" ";"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_mandir}/man1/
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
 python ./setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT%{py_sitescriptdir} -type f -name "*.py" | xargs rm
 
-cp docs/man/*.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+install docs/man/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -81,11 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/btsethttpseeds.py
 %attr(755,root,root) %{_bindir}/btcopyannounce.py
 %{py_sitescriptdir}/%{name}
-%{_mandir}/man1/*.bittornado.1.gz
-%{_mandir}/man1/btcopyannounce.1.gz
-%{_mandir}/man1/btmaketorrentgui.1.gz
-%{_mandir}/man1/btsethttpseeds.1.gz
-
+%{_mandir}/man1/*.bittornado.1*
+%{_mandir}/man1/btcopyannounce.1*
+%{_mandir}/man1/btsethttpseeds.1*
 
 %files gui
 %defattr(644,root,root,755)
@@ -93,3 +91,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/btcompletedirgui.py
 %attr(755,root,root) %{_bindir}/btmaketorrentgui.py
 %attr(755,root,root) %{_bindir}/bt-t-make.py
+%{_mandir}/man1/btmaketorrentgui.1*
