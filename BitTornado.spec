@@ -2,7 +2,7 @@ Summary:	BitTornado - an improved bittorrent client
 Summary(pl.UTF-8):	BitTornado - ulepszony klient bittorrenta
 Name:		BitTornado
 Version:	0.3.18
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications/Communications
 Source0:	http://download2.bittornado.com/download/%{name}-%{version}.tar.gz
@@ -57,10 +57,12 @@ find -type f -exec sed -i -e 's|#!.*python.*|#!%{_bindir}/python|g' "{}" ";"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_mandir}/man1/
 
 python ./setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT%{py_sitescriptdir} -type f -name "*.py" | xargs rm
+
+cp docs/man/*.1 $RPM_BUILD_ROOT%{_mandir}/man1/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -79,6 +81,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/btsethttpseeds.py
 %attr(755,root,root) %{_bindir}/btcopyannounce.py
 %{py_sitescriptdir}/%{name}
+%{_mandir}/man1/*.bittornado.1.gz
+%{_mandir}/man1/btcopyannounce.1.gz
+%{_mandir}/man1/btmaketorrentgui.1.gz
+%{_mandir}/man1/btsethttpseeds.1.gz
+
 
 %files gui
 %defattr(644,root,root,755)
