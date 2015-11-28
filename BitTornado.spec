@@ -59,7 +59,7 @@ find -type f -exec sed -i -e 's|#!.*python.*|#!%{_bindir}/python|g' "{}" ";"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
-python ./setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
+%py_install
 find $RPM_BUILD_ROOT%{py_sitescriptdir} -type f -name "*.py" | xargs rm
 
 install docs/man/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
