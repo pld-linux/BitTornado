@@ -8,6 +8,7 @@ Group:		Applications/Communications
 Source0:	http://download2.bittornado.com/download/%{name}-%{version}.tar.gz
 # Source0-md5:	faeb137036cfaaeab91afc7f62c7dc30
 URL:		http://bittornado.com/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
